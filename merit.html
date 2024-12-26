@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted Message for Merit</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+        input[type="password"] {
+            display: block;
+            padding: 14px;
+            width: calc(100% - 28px);
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="password"]:focus {
+            border-color: #ff7eb3;
+            outline: none;
+        }
+        button {
+            display: block;
+            background-color: #ff7eb3;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff5277;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            white-space: pre-wrap;
+            line-height: 10%
+            padding: 10px;
+        }
+        .image-wrap {
+            float: right;
+            margin: 10px 0 10px 20px;
+            max-width: 40%;
+            display: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Password to View Message <br> It's just you and me here 😊
+        </h1>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="decryptMessage()">Submit</button>
+        <div id="content">
+           
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        const encryptedMessage = `Merit bby, 💖
+
+I'm sorry you have to go through that stress before you'd decrypt this message.
+
+I’ve been meaning to reach out, and today feels like the right moment. First, I want to say I’m
+truly sorry for not being there on your convocation day. I know how much that day meant to you,
+and I regret not showing up for you or even sending a message. You deserve so much better. I
+hope you can forgive me and know that I’m willing to be present in the days ahead—through
+your highs and lows, your hills and plateaus.
+
+These past weeks, I’ve had a lot to think about. When I asked you about us, your response,
+“Let’s see how it goes,” has stayed with me. I’ve held onto it with hope because the truth is, my
+feelings for you have only grown stronger.
+
+You’re an incredible woman—kind, intelligent, and so full of grace. Being around you makes
+everything brighter. I want to be that person you can rely on, the one who makes you smile, and
+the one who stands by you, no matter what.
+
+I know opening your heart isn’t something you take lightly, and I respect that. But I want you to
+know that I’m here—ready to love you, care for you, and give you my all. I don’t want to rush
+you or push too hard; I just want you to feel safe enough to let me in when you’re ready.
+
+By the grace of this festive season, I want to wish you a Merry Christmas and a Happy New
+Year. I hope it’s filled with happiness, warmth, and the love you deserve. I hope we can explore
+this year together in love.
+I love you ❤️
+
+I will be expecting a response soon.
+
+With all my heart,
+Divine.`;
+        const correctPassword = "231124MD";
+
+        function decryptMessage() {
+            const password = document.getElementById('password').value;
+            const messageElement = document.getElementById('message');
+            const imageElement = document.getElementById('secretImage');
+
+            if (password === correctPassword) {
+                messageElement.textContent = encryptedMessage;
+                messageElement.style.color = "#4caf50";
+                imageElement.style.display = 'block';
+            } else {
+                messageElement.textContent = "Incorrect password. Try again.";
+                messageElement.style.color = "red";
+                imageElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
