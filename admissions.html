@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application - Patimo College International</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Patimo College International</h1>
+        <p>Excellence in Education | WAEC & NECO Accredited</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-application.html">Student Application</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Student Application Form</h2>
+        <form action="submit_student_application.php" method="post" enctype="multipart/form-data">
+            
+            <h3>Personal Information</h3>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="address">Home Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <h3>Parent/Guardian Information</h3>
+            <label for="parent-name">Parent/Guardian's Name:</label>
+            <input type="text" id="parent-name" name="parent_name" required>
+
+            <label for="parent-phone">Parent/Guardian's Phone:</label>
+            <input type="tel" id="parent-phone" name="parent_phone" required>
+
+            <label for="parent-email">Parent/Guardian's Email:</label>
+            <input type="email" id="parent-email" name="parent_email">
+
+            <h3>Academic Details</h3>
+            <label for="previous-school">Previous School Attended:</label>
+            <input type="text" id="previous-school" name="previous_school" required>
+
+            <label for="last-grade">Last Grade Completed:</label>
+            <input type="text" id="last-grade" name="last_grade" required>
+
+            <label for="desired-class">Class Applying For:</label>
+            <select id="desired-class" name="desired_class" required>
+                <option value="">Select</option>
+                <option value="JSS1">JSS1</option>
+                <option value="JSS2">JSS2</option>
+                <option value="JSS3">JSS3</option>
+                <option value="SS1">SS1</option>
+                <option value="SS2">SS2</option>
+                <option value="SS3">SS3</option>
+            </select>
+
+            <h3>Extracurricular Activities</h3>
+            <label for="activities">Select at least one activity:</label>
+            <select id="activities" name="activities[]" multiple required>
+                <option value="Sports">Sports</option>
+                <option value="Music & Drama">Music & Drama</option>
+                <option value="Science Club">Science Club</option>
+                <option value="Literary & Debating Society">Literary & Debating Society</option>
+                <option value="Entrepreneurship">Entrepreneurship</option>
+            </select>
+
+            <h3>Upload Documents</h3>
+            <label for="passport-photo">Upload Passport Photo (JPG/PNG):</label>
+            <input type="file" id="passport-photo" name="passport_photo" accept=".jpg, .png" required>
+
+            <label for="birth-certificate">Upload Birth Certificate (PDF/JPG):</label>
+            <input type="file" id="birth-certificate" name="birth_certificate" accept=".pdf, .jpg, .jpeg, .png" required>
+
+            <h3>Additional Information</h3>
+            <label for="additional-info">Why do you want to join Patimo College International?</label>
+            <textarea id="additional-info" name="additional_info" rows="4" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Patimo College International. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

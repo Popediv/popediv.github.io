@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers' Application - Patimo College International</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Patimo College International</h1>
+        <p>Excellence in Education | WAEC & NECO Accredited</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="teachers-application.html">Teachers' Application</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Teacher Application Form</h2>
+        <form action="submit_application.php" method="post" enctype="multipart/form-data">
+            <h3>Personal Information</h3>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <h3>Educational Qualifications</h3>
+            <label for="highest-qualification">Highest Qualification:</label>
+            <input type="text" id="highest-qualification" name="highest_qualification" required>
+
+            <label for="institution">Institution Attended:</label>
+            <input type="text" id="institution" name="institution" required>
+
+            <label for="graduation-year">Year of Graduation:</label>
+            <input type="number" id="graduation-year" name="graduation_year" required>
+
+            <h3>Work Experience</h3>
+            <label for="experience">Years of Teaching Experience:</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <label for="previous-school">Previous School(s) Taught:</label>
+            <textarea id="previous-school" name="previous_school" rows="3" required></textarea>
+
+            <h3>Subject Preference</h3>
+            <label for="subjects">Subjects You Can Teach:</label>
+            <input type="text" id="subjects" name="subjects" required>
+
+            <h3>Upload Documents</h3>
+            <label for="resume">Upload Resume/CV (PDF/DOC):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+            <label for="certificate">Upload Certificates (PDF/JPG):</label>
+            <input type="file" id="certificate" name="certificate" accept=".pdf, .jpg, .jpeg, .png" required>
+
+            <h3>Additional Information</h3>
+            <label for="additional-info">Why do you want to teach at Patimo College International?</label>
+            <textarea id="additional-info" name="additional_info" rows="4" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Patimo College International. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

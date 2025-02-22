@@ -1,192 +1,524 @@
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
 }
 
+/* Header Styling */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #004d00, #002600);
-    padding: 20px 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(to right, #004080, #0073e6);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.logo img {
-    height: 70px;
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #003366;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+nav ul li a:hover {
+    background: #0073e6;
+    border-radius: 5px;
+}
+/* Home & About Sections */
+#home-about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 30px auto;
+    max-width: 90%;
+    gap: 20px;
+}
+
+/* Individual Sections */
+#home, #about {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#home:hover, #about:hover {
+    transform: translateY(-5px);
+}
+
+/* Headings */
+#home h2, #about h2 {
+    color: #004aad;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+#home p, #about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+    animation: slideUp 1.5s ease-in-out;
+    background: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Footer */
+/* Footer Styling */
+footer {
+    background: #002c6e;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+/* Footer Links */
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #f0f5f9;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #25d366;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
     transition: transform 0.3s;
 }
 
-.logo img:hover {
-    transform: scale(1.1);
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Copyright Text */
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #002c6e;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #0044cc;
+    margin-top: 20px;
+}
+
+/* Section Styling */
+#academics {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Subject List */
+.subjects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subjects-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.subjects-container li {
+    padding: 8px;
+    background: #ddeeff;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+/* Grading Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #0044cc;
+    color: white;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background: #002c6e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Application Form Section */
+section {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #0056b3;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #004494;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+/* Contact Section */
+#contact {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid #004aad;
+}
+
+.contact-item {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.contact-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* WhatsApp Contact */
+.whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whatsapp img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp a {
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #002c6e;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #0044cc;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    transition: transform 0.3s;
+    display: inline;
+    margin: 0 15px;
 }
 
-nav ul li:hover {
-    transform: scale(1.1);
-}
-
-nav a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s;
-    padding: 10px 15px;
-    border-radius: 5px;
 }
 
-nav a:hover {
-    color: #ffcc00;
-    background: rgba(255, 255, 255, 0.2);
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.animated-banner {
-    background: url('mothersjoy.jpg') no-repeat center center;
-    background-size: cover;
-    height: 300px;
-    animation: moveBanner 5s infinite alternate ease-in-out;
-}
-
-@keyframes moveBanner {
-    0% { background-position: top; }
-    100% { background-position: bottom; }
-}
-
-#about, #programs {
+/* Form Section */
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
     background: white;
-    padding: 50px;
-    margin: 40px auto;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: #002c6e;
     text-align: center;
-    position: relative;
+    margin-bottom: 15px;
 }
 
-#about h2, #programs h2 {
-    color: #004d00;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-#about h2::after, #programs h2::after {
-    content: '';
-    width: 50px;
-    height: 5px;
-    background: #ffcc00;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 3px;
-}
-
-.proprietor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px;
-    background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: transform 0.3s;
-}
-
-.proprietor:hover {
-    transform: scale(1.02);
-}
-
-.proprietor img {
-    width: 220px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.proprietor h3 {
-    font-size: 1.8em;
-    color: #004d00;
-}
-
-.proprietor p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 500px;
-    line-height: 1.6;
-}
-
-#programs ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-#programs li {
-    font-size: 1.2em;
-    color: white;
-    background: #004d00;
-    padding: 15px 25px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-    cursor: pointer;
-}
-
-#programs li:hover {
-    background: #ffcc00;
-    color: #004d00;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #002600;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
-    font-size: 1.1em;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+/* Form Styles */
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.footer-content {
-    max-width: 800px;
-    text-align: center;
-}
-
-footer a {
-    color: #ffcc00;
-    text-decoration: none;
+label {
     font-weight: bold;
-    transition: color 0.3s;
+    margin-top: 10px;
 }
 
-footer a:hover {
-    color: #e6b800;
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* File Input */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Extracurricular Activity Dropdown */
+select[multiple] {
+    height: 100px;
+}
+
+/* Submit Button */
+button {
+    background: #0044cc;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #003399;
+}
+
+/* Footer */
+footer {
+    background: #002c6e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
